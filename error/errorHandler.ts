@@ -15,7 +15,7 @@ export const errorHandler = (
   err: mainError,
   req: Request,
   res: Response,
-  next: NextFunction,
+  next: NextFunction
 ) => {
   preparedError(err, res);
 };
