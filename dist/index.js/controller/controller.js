@@ -20,7 +20,7 @@ const createUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         const user = yield model_1.userModel.create({
             email,
             name,
-            phone: parseInt(phone),
+            phone,
             image: secure_url,
             imageID: public_id,
             location,
@@ -34,7 +34,7 @@ const createUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
     }
     catch (error) {
         return res.status(mainError_1.HTTP.BAD_REQUEST).json({
-            message: `error creating user: ${error}`,
+            message: `error creating user: ${error.message}`,
             info: error,
         });
     }

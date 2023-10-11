@@ -14,7 +14,7 @@ export const createUser = async (
     const user = await userModel.create({
       email,
       name,
-      phone: parseInt(phone),
+      phone,
       image: secure_url,
       imageID: public_id,
       location,
@@ -27,7 +27,7 @@ export const createUser = async (
     });
   } catch (error: any) {
     return res.status(HTTP.BAD_REQUEST).json({
-      message: `error creating user: ${error}`,
+      message: `error creating user: ${error.message}`,
       info: error,
     });
   }
