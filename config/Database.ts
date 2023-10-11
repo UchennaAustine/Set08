@@ -6,7 +6,7 @@ const url: string = envs.db;
 
 const Database = async () => {
   try {
-    const active = await mongoose.connect(url).then(() => {
+    const activate = await mongoose.connect(url).then(() => {
       console.log(`Database is Active`);
     });
   } catch (error: any) {

@@ -18,7 +18,7 @@ const url = env_1.envs.db;
 // const url: string = "mongodb://127.0.0.1:27017/webDB";
 const Database = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const active = yield mongoose_1.default.connect(url).then(() => {
+        const activate = yield mongoose_1.default.connect(url).then(() => {
             console.log(`Database is Active`);
         });
     }
