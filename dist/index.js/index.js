@@ -23,7 +23,7 @@ process.on("uncaughtException", (error) => {
 const port = env_1.envs.port;
 const app = (0, express_1.default)();
 (0, app_1.default)(app);
-const server = app.listen(port, () => __awaiter(void 0, void 0, void 0, function* () {
+const server = app.listen(process.env.port || port, () => __awaiter(void 0, void 0, void 0, function* () {
     yield (0, Database_1.default)();
     console.log("Active: ", port);
 }));
